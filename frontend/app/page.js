@@ -1,5 +1,5 @@
 import Link from "next/link";
-const trasigKod = ;
+
 export default function Home() {
   return (
     <div className="flex flex-col flex-1 items-center bg-zinc-50 font-sans dark:bg-black min-h-screen">
@@ -24,7 +24,7 @@ export default function Home() {
         </p>
         <Link href="/register">
           <button className="rounded-full bg-foreground px-6 py-3 text-background font-medium transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc]">
-            Skapa användare 
+            Skapa användare
           </button>
         </Link>
       </main>
