@@ -1,8 +1,18 @@
 
-## Publicerad sajt (med Docker + nginx)
+## CI/CD med GitHub Actions
+Push till main triggar automatiskt:
+1. Frontend-kontroller (npm ci, lint, build)
+2. Deployment till EC2 via SSH + Docker Compose
+
+## Feature flag
+NEXT_PUBLIC_FEATURE_NEW_DASHBOARD styr en informationsbanner på kontosidan.
+- false = Deployment (koden finns, funktionen dold)
+- true = Release (funktionen synlig)
+
+## Publicerad sajt
 http://ec2-32-199-182-33.compute-1.amazonaws.com
 
-(Nu med MySQL-databas istället för arrayer, både lokalt och på EC2.)
+
 
 # Skapa en Banksajt och publicera på aws
 
