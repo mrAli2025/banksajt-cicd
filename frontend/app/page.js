@@ -1,5 +1,5 @@
 import Link from "next/link";
-
+const Variabel = 123;
 export default function Home() {
   return (
     <div className="flex flex-col flex-1 items-center bg-zinc-50 font-sans dark:bg-black min-h-screen">
