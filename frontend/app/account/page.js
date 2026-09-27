@@ -12,7 +12,7 @@ export default function Account() {
       const token = localStorage.getItem("token");
 
       try {
-        const response = await fetch("http://127.0.0.1:3001/me/accounts", {
+        const response = await fetch("/me/accounts", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -41,7 +41,7 @@ export default function Account() {
     const token = localStorage.getItem("token");
 
     try {
-      const response = await fetch("http://127.0.0.1:3001/me/accounts/transactions", {
+      const response = await fetch("/me/accounts/transactions", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

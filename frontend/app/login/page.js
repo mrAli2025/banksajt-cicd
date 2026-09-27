@@ -14,7 +14,7 @@ export default function Login() {
     setError("");
 
     try {
-      const response = await fetch("http://127.0.0.1:3001/sessions", {
+      const response = await fetch("/sessions", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
