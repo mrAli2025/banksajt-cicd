@@ -3,7 +3,7 @@ services:
     build:
       context: ./frontend
       args:
-        NEXT_PUBLIC_FEATURE_NEW_DASHBOARD: "false"
+        NEXT_PUBLIC_FEATURE_NEW_DASHBOARD: "true"
     ports:
       - "3000:3000"
 
