@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "";
 export default function Account() {
   const [amount, setAmount] = useState(null);
   const [deposit, setDeposit] = useState("");
@@ -12,7 +12,7 @@ export default function Account() {
       const token = localStorage.getItem("token");
 
       try {
-        const response = await fetch("/me/accounts", {
+        const response = await fetch(`${API_URL}/me/accounts`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -41,7 +41,7 @@ export default function Account() {
     const token = localStorage.getItem("token");
 
     try {
-      const response = await fetch("/me/accounts/transactions", {
+      const response = await fetch(`${API_URL}/me/accounts/transactions`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

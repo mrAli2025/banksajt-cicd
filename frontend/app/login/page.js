@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "";
 export default function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -14,7 +14,7 @@ export default function Login() {
     setError("");
 
     try {
-      const response = await fetch("/sessions", {
+      const response = await fetch(`${API_URL}/sessions`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
