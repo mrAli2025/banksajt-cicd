@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from "react";
 const API_URL = process.env.NEXT_PUBLIC_API_URL || "";
+const FEATURE_NEW_DASHBOARD = process.env.NEXT_PUBLIC_FEATURE_NEW_DASHBOARD === "true";
+
 export default function Account() {
   const [amount, setAmount] = useState(null);
   const [deposit, setDeposit] = useState("");
@@ -65,6 +67,12 @@ export default function Account() {
     <div className="flex flex-col items-center justify-center min-h-screen bg-zinc-50 dark:bg-black px-4">
       <div className="flex flex-col gap-6 w-full max-w-sm bg-white dark:bg-zinc-900 p-8 rounded-lg shadow">
         <h1 className="text-2xl font-semibold text-center">Mitt konto</h1>
+
+        {FEATURE_NEW_DASHBOARD && (
+          <div className="bg-blue-50 dark:bg-blue-950 border border-blue-200 dark:border-blue-800 rounded-lg p-4 text-sm text-blue-800 dark:text-blue-200">
+            🎉 Nytt: Spara pengar automatiskt med vårt sparkonto!
+          </div>
+        )}
 
         <p className="text-center text-xl">
           Saldo: {amount !== null ? `${amount} kr` : "Laddar..."}
